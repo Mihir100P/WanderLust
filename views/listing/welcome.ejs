@@ -1,0 +1,35 @@
+<% - layout("layouts/boilerplate") %>
+<style>
+    .head{
+        text-align: center;
+        margin-top: 30px;
+    }
+    .btn_div{
+        text-align: center;
+        padding-top: 30px;
+    }
+    .btn_div a{
+        margin-left: 0.7rem;
+        margin-right: 0.7rem;
+    }
+    .heart{
+        color: red;
+    }
+</style>
+<body>
+    <h1 class="head">Welcome to our WanderLust page</h1>
+    <h3 class="head">Click here! to visit our site &hearts;</h3>
+    <div class="btn_div">
+    <form action="/listing">
+        <button class="btn btn-outline-dark mb-2">Visit</button>
+    </form>
+    </div>
+    <div class="btn_div">
+        <a href="/signup"><button class="btn btn-outline-dark mb-2">Signup</button></a>
+        <a href="/login"><button class="btn btn-outline-dark mb-2">Login</button></a>
+    </div>
+    <div class="btn_div">
+         <h1 class="heart">&hearts; &hearts; &hearts;</h1>
+    </div>
+   
+</body>

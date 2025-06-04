@@ -1,0 +1,86 @@
+<% - layout("layouts/boilerplate") %>
+
+<body>
+    <div class="row">
+    <div class="col-8 offset-2">
+    <h1 style="margin-top: 2rem;">Create new one</h1>
+    <form method="post" action="/listing"  novalidate class="needs-validation" enctype="multipart/form-data">
+        <div class="mb-3">
+        <label class="form-label" for="title">Title</label>
+        <input type="text" id="title" name="list[title]" placeholder="Enter title" class="form-control " required> 
+        <div class="valid-feedback">
+      Looks good!
+    </div>
+    <div class="invalid-feedback">
+      Please write a Title
+    </div>
+        </div>
+        <div class="mb-3">
+            <label for="desc" class="form-label">Description</label>
+            <textarea name="list[description]" id="desc" placeholder="description"  class="form-control" required></textarea>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                Please write a short Description
+              </div>
+        </div>
+        <div class="mb-3">
+            <label for="img" class="form-label">Upload Image</label>
+            <input type="file" id="img" name="list[image]" class="form-control" required>  
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+                Please upload image
+              </div>
+        </div>
+        <div class="mb-3">
+            <label for="category" class="form-label">Category</label>
+            <input type="text" id="category" name="list[category]" class="form-control" placeholder="category" required>  
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+                Please type Category
+              </div>
+        </div>
+        <div class="row">
+        <div class="mb-3 col-md-4">
+            <label for="pr" class="form-label">Price</label>
+        <input type="text" id="pr" name="list[price]" placeholder="price" class="form-control" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+        <div class="invalid-feedback">
+          Please write valid Price
+        </div>
+        </div>
+          <div class="mb-3 col-md-8" >
+            <label for="loc" class="form-label">Location</label>
+            <input type="text" id="loc" name="list[location]" placeholder="location" class="form-control" required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+              Please write a Location
+            </div>
+          </div>
+        </div>
+         <div class="mb-3">
+            <label for="con" class="form-label">Country</label>
+        <input type="text" id="con" name="list[country]" placeholder="country" class="form-control" required> 
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+        <div class="invalid-feedback">
+          Please write Country name
+        </div>
+         </div>
+         <br>
+            <button class="btn btn-dark add-btn" >Add</button>
+         <br> <br>
+    </form>
+</div>
+</div>
+</body>

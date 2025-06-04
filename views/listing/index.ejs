@@ -1,0 +1,85 @@
+<%- layout("layouts/boilerplate") %>
+<body>
+    <div id="filters">
+        <div class="filter">
+           <div><i class="fa-solid fa-fire"></i></div>
+            <p>trending</p>
+        </div>
+        <div class="filter">
+             <div><i class="fa-solid fa-city"></i></div>
+            <p>iconic cities</p>
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-bed"></i></div>
+            <p>rooms</p>
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-person-swimming"></i></div>
+            <p>pools</p>
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-mountain-sun"></i></div>
+            <p>view</p>
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-umbrella-beach"></i></div>
+            <p>beach</p>
+        </div>
+        <div class="filter">
+           <div><i class="fa-solid fa-tractor"></i></div>
+            <p>farms</p>
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-water"></i></div>
+            <p>lake front</p>
+        </div>
+        <div class="filter">
+           <div><i class="fa-solid fa-snowflake"></i></div>
+            <p>snow flake</p>
+        </div>
+        <div class="filter">
+           <div><i class="fa-solid fa-landmark-dome"></i></div>
+            <p>dome</p>
+        </div>
+        <div class="filter">
+           <div><i class="fa-solid fa-chess-rook"></i></div>
+            <p>castle</p>
+        </div>
+        <div class="Tax-toggle">
+        <div class="form-check-reverse form-switch">
+  <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
+  <label class="form-check-label" for="switchCheckDefault">Tax-Switch</label>
+</div>
+</div>
+    </div>
+    <div class="row mt-3 ind">
+        <% listings.forEach(data => { %>
+            <a href="/listing/show/<%= data.id %>" class="card" style="width: 18rem; border: none; padding: 0; text-decoration: none; color: inherit;">
+                <img src="<%= data.image.url %>" class="card-img" alt="...">
+                <div class="card-img-overlay"><%= data.country %></div>
+                <div class="card-body">
+                    <p class="card-text"><%= data.title %></p>
+                    <p class="card-text">
+                        &#8377; <%= data.price != null ? data.price.toLocaleString("en-IN") : "0" %>
+                        <i class="tax-info">&nbsp; &nbsp; &nbsp; &nbsp; GST +18%</i>
+                    </p>
+                </div>
+            </a>
+        <% }); %>
+    </div>
+</body>
+<script>
+let btn = document.getElementById("switchCheckDefault");
+    btn.addEventListener("click",()=>{
+        let taxInfo = document.getElementsByClassName("tax-info");
+        for(info of taxInfo){
+            if(info.style.display!="inline"){
+                info.style.display="inline";
+            }
+            else{
+                info.style.display="none";
+             }
+        }
+    });
+</script>
+

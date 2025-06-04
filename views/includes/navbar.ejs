@@ -1,0 +1,57 @@
+<nav class="navbar navbar-expand-sm bg-body-light border-bottom sticky-top">
+  <div class="container-fluid">
+    <!-- Brand -->
+    <a class="navbar-brand" href="/listing">
+      <i class="fa-solid fa-compass"></i>
+    </a>
+
+    <!-- Toggle button for mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible navbar content -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <!-- Left Nav -->
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/listing">Explore</a>
+        </li>
+      </ul>
+
+      <!-- Search Bar (center) -->
+  <%if(currUser){%>
+        <div class="searchBar navbar-collapse ms-auto">
+            <form method="GET" action="/listing/search" class="d-flex mx-auto my-2 my-sm-0" role="search">
+            <input 
+            class="form-control me-2 search-inp" 
+            type="search" 
+            name="category"
+            placeholder="Search destinations"
+            aria-label="Search"/>
+            <button class="btn btn-search" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+            </form>
+        </div>
+        <%}%>
+      <!-- Right Nav -->
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/listing/new">Airbnb your home</a>
+        </li>
+
+        <% if (!currUser || currUser === "Undefined") { %>
+        <li class="nav-item">
+          <a class="nav-link" href="/signup"><b>Signup</b></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/login"><b>Login</b></a>
+        </li>
+        <% } else { %>
+        <li class="nav-item">
+          <a class="nav-link" href="/logout"><b>Logout</b></a>
+        </li>
+        <% } %>
+      </ul>
+    </div>
+  </div>
+</nav>

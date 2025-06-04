@@ -1,0 +1,162 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+/* nav bar */
+.fa-compass{
+    color: #fe424d;
+    font-size: 2rem;
+}
+.navbar{
+    height: 5rem;
+    background-color: white;
+}
+.nav-link{
+    color: #222222 !important;
+}
+.navbar-collapse{
+    background-color: white;
+}
+
+/* footer */
+.container{
+    flex: 1;
+}
+.footer{
+    bottom: 0;
+    background-color: #ebebeb;
+    height: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
+.f-social p{
+    display: inline;
+}
+.f-social div{
+    display: inline;
+}
+.any{
+    margin-right: 30px;
+}
+.f-social-i i{
+    margin-right: 7px;
+} 
+.f-info{
+    padding: 0;
+    margin: 0;
+}
+.f-info li {
+    list-style-type: none;
+   display: inline;
+   margin-right: 15px;
+}
+.info-a {
+    text-decoration: none;
+    color: #222222;
+}
+.under:hover{
+    text-decoration:underline;
+}
+
+/* cards */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.ind{
+    margin-left: 2rem;
+}
+.card{
+    margin-right:30px ;
+    margin-bottom:45px ;
+}
+.card-img{
+    height: 240px;
+    width: 100%; 
+    border-radius: 25px;
+    
+}
+.card-img-overlay{
+    opacity: 0;
+}
+.card-img-overlay:hover{
+        opacity: 0.2;
+        background-color: white;
+}
+
+ /* new and edit */
+ .add-btn , .edit-btn{
+    background-color: #fe424d !important;
+    border: none;
+ }
+
+ /* show */
+ .card-body{
+    padding: 0;
+    margin: 0;
+ }
+
+ /* map */
+#map{
+    height: 500px;
+}
+
+/* filters and toggle tax*/
+  #filters{
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+    .filter{
+        margin-top: 2rem; 
+        margin-left: 2rem; 
+        text-align: center;
+        opacity: 0.6;
+    }
+    .filter:hover{
+        opacity: 1;
+        cursor: pointer;
+    }
+    .Tax-toggle{
+        margin-left: 3rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        height: 3.5rem;
+        border: 1px solid rgb(85, 79, 79) ;
+        border-radius: 1rem;
+        padding: 1rem 3rem 1rem 3rem;
+    }
+    .form-check-label{
+        margin-right: 1rem;
+    }
+    .tax-info{
+        display: none;
+    }
+ 
+/* search bar */
+.btn-search{
+    background-color: #fe424d;
+    color: #fff;
+    border-radius: 25px;
+    padding: 0 1rem 0 1rem;
+  }
+  .btn-search:hover{
+    background-color: #fe424d;
+    color: #fff;
+  }
+  .btn-search i{
+    display: inline;
+    margin-right: 0.5rem;
+  }
+  .search-inp{
+     border-radius: 25px;
+     padding: 0.5rem 3rem 0.5rem 3rem;
+  }

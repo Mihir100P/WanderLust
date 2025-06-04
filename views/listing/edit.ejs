@@ -1,0 +1,86 @@
+<% layout("layouts/boilerplate.ejs") %>
+<body>
+    <div class="row">
+    <div class="col-8 offset-2">
+    <h1 style="margin-top: 2rem;">Edit the content</h1>
+    <form method="post" action="/listing/<%=data.id%>?_method=PUT" class="needs-validation" novalidate enctype="multipart/form-data" >
+        <div class="mb-3">
+        <label class="form-label" for="title">Title</label>
+        <input type="text" id="title" name="list[title]" value="<%=data.title%>" class="form-control" required> 
+        <div class="valid-feedback">
+            Looks good!
+          </div>
+          <div class="invalid-feedback">
+            Please write a Title
+          </div>
+        </div>
+        <div class="mb-3">
+            <label for="desc" class="form-label">Description</label>
+            <textarea name="list[description]" id="desc" class="form-control" required><%=data.description%></textarea>
+            <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                Please write a short Description
+              </div>
+        </div>
+        <div class="mb-3">
+          Image Preview <br>
+          <img src="<%=originalImg%>">;
+        </div>
+        <div class="mb-3">
+            <label for="img" class="form-label">Upload new image</label>
+            <input type="file" id="img" name="list[image]" value="<%=data.image%>" class="form-control">  
+            <div class="valid-feedback">
+                Looks good!
+              </div>
+        </div>
+        <div class="mb-3">
+            <label for="category" class="form-label">Category</label>
+            <input type="text" id="category" name="list[category]" value="<%=data.category%>" class="form-control" placeholder="category" required>  
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+                Please type Category
+              </div>
+        </div>
+        <div class="row">
+        <div class="mb-3 col-md-4">
+            <label for="pr" class="form-label">Price</label>
+        <input type="text" id="pr" name="list[price]" value="<%=data.price%>" class="form-control" required>
+        <div class="valid-feedback">
+            Looks good!
+          </div>
+          <div class="invalid-feedback">
+            Please write valid Price
+          </div>
+        </div>
+          <div class="mb-3 col-md-8" >
+            <label for="loc" class="form-label">Location</label>
+            <input type="text" id="loc" name="list[location]" value="<%=data.location%>" class="form-control" required>
+            <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                Please write a Location
+              </div>
+          </div>
+        </div>
+         <div class="mb-3">
+            <label for="con" class="form-label">Country</label>
+        <input type="text" id="con" name="list[country]" value="<%=data.country%>" class="form-control" required> 
+        <div class="valid-feedback">
+            Looks good!
+          </div>
+          <div class="invalid-feedback">
+            Please write a Country
+          </div>
+         </div>
+         <br>
+            <button class="btn btn-dark edit-btn" >Edit</button>
+         <br> <br>
+    </form>
+</div>
+</div>
+</body>
